@@ -24,11 +24,11 @@ public class Mensagens {
 
     @ManyToOne
     @JoinColumn(name = "remetente_id", nullable = false)
-    @JsonIgnoreProperties({"mensagensEnviadas", "mensagensRecebidas"})
+    @JsonIgnoreProperties({"mensagensEnviadas", "mensagensRecebidas","produtos","email"})
     private Usuarios remetente;
 
     @ManyToOne
-    @JsonIgnoreProperties({"mensagensEnviadas", "mensagensRecebidas"})
+    @JsonIgnoreProperties({"mensagensEnviadas", "mensagensRecebidas","produtos","email"})
     @JoinColumn(name = "destinatario_id", nullable = false)
     private Usuarios destinatario;
 
